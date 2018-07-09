@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="zqProjectSuite">
+  <test verbose="2" name="zqProjectTestCase">
+    <packages>
+    	<package name="cn.lixing.zqProject.facility.TestCase">
+    	</package>
+    	<package name="cn.lixing.zqProject.login.TestCase">
+    	</package>
+    </packages>
+  </test>
+</suite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [zqProjectSuite]">
+  <test name="zqProjectTestCase(failed)">
+    <classes>
+      <class name="cn.lixing.zqProject.facility.TestCase.CourseTestCase">
+        <methods>
+          <include name="close"/>
+          <include name="addCourseTestCase" invocation-numbers="0"/>
+          <include name="initTestClass"/>
+        </methods>
+      </class> <!-- cn.lixing.zqProject.facility.TestCase.CourseTestCase -->
+    </classes>
+  </test> <!-- zqProjectTestCase(failed) -->
+</suite> <!-- Failed suite [zqProjectSuite] -->

@@ -16,6 +16,8 @@ public class CourseElementObject {
 	private WebElement contentElement;
 	private WebElement saveBtnElement;
 	private WebElement editBtnElement;
+	private WebElement getContentXpathElement;
+	
 	private CourseElementXpathData xpathData;
 	private static CourseElementObject elementObject;
 	private WebDriver driver;
@@ -112,4 +114,12 @@ public class CourseElementObject {
 	public void setDriver(WebDriver driver) {
 		this.driver = driver;
 	}
+	public WebElement getGetContentXpathElement() {
+		getContentXpathElement=page.getWebElement(xpathData.getGetContentXpath());
+		return getContentXpathElement;
+	}
+	public void setGetContentXpathElement(WebElement getContentXpathElement) {
+		this.getContentXpathElement = getContentXpathElement;
+	}
+	
 }

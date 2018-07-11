@@ -2,41 +2,46 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27419" started-at="2018-07-09T06:39:41Z" finished-at="2018-07-09T06:40:09Z">
+  <suite name="Default suite" duration-ms="44739" started-at="2018-07-11T14:36:50Z" finished-at="2018-07-11T14:37:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27419" started-at="2018-07-09T06:39:41Z" finished-at="2018-07-09T06:40:09Z">
-      <class name="cn.lixing.zqProject.keyPersonManage.TestCase.KeyPersonManageTestCase">
-        <test-method status="PASS" signature="initTestClass()[pri:0, instance:cn.lixing.zqProject.keyPersonManage.TestCase.KeyPersonManageTestCase@2ac1fdc4]" name="initTestClass" is-config="true" duration-ms="17088" started-at="2018-07-09T14:39:41Z" finished-at="2018-07-09T14:39:58Z">
+    <test name="Default test" duration-ms="44739" started-at="2018-07-11T14:36:50Z" finished-at="2018-07-11T14:37:35Z">
+      <class name="cn.lixing.zqProject.pushManage.TestCase.PushTestCase">
+        <test-method status="PASS" signature="initTestClass()[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="initTestClass" is-config="true" duration-ms="18302" started-at="2018-07-11T22:36:50Z" finished-at="2018-07-11T22:37:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTestClass -->
-        <test-method status="PASS" signature="AddKeyPersonTestCase(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cn.lixing.zqProject.keyPersonManage.TestCase.KeyPersonManageTestCase@2ac1fdc4]" name="AddKeyPersonTestCase" duration-ms="9137" started-at="2018-07-09T14:39:58Z" data-provider="addKeyPersonData" finished-at="2018-07-09T14:40:08Z">
+        <test-method status="PASS" signature="addPushTestCase(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="addPushTestCase" duration-ms="25108" started-at="2018-07-11T22:37:08Z" data-provider="pushData" finished-at="2018-07-11T22:37:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[lixing01]]>
+                <![CDATA[测试标题]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[18924779454]]>
+                <![CDATA[测试摘要]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[���ӳɹ�]]>
+                <![CDATA[测试内容]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[添加成功]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddKeyPersonTestCase -->
-        <test-method status="PASS" signature="close()[pri:0, instance:cn.lixing.zqProject.keyPersonManage.TestCase.KeyPersonManageTestCase@2ac1fdc4]" name="close" is-config="true" duration-ms="1176" started-at="2018-07-09T14:40:08Z" finished-at="2018-07-09T14:40:09Z">
+        </test-method> <!-- addPushTestCase -->
+        <test-method status="PASS" signature="close()[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="close" is-config="true" duration-ms="1291" started-at="2018-07-11T22:37:33Z" finished-at="2018-07-11T22:37:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- cn.lixing.zqProject.keyPersonManage.TestCase.KeyPersonManageTestCase -->
+      </class> <!-- cn.lixing.zqProject.pushManage.TestCase.PushTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

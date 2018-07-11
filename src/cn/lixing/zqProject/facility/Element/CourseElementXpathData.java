@@ -10,6 +10,7 @@ public class CourseElementXpathData {
 	private String contentXpath;
 	private String saveBtnXpath;
 	private String editBtnXpath;
+	private String getContentXpath;
 	
 	public CourseElementXpathData() {
 		devicesListXpath=getData("devicesListXpath", "\\TestDataFile\\courseXpath");
@@ -19,6 +20,7 @@ public class CourseElementXpathData {
 		contentXpath=getData("contentXpath", "\\TestDataFile\\courseXpath");
 		saveBtnXpath=getData("saveBtn", "\\TestDataFile\\courseXpath");
 		editBtnXpath=getData("editBtn", "\\TestDataFile\\courseXpath");
+		getContentXpath=getData("getContentXpath", "\\TestDataFile\\courseXpath");
 	}
 
 	public String getEditBtnXpath() {
@@ -75,6 +77,14 @@ public class CourseElementXpathData {
 
 	public void setSaveBtnXpath(String saveBtnXpath) {
 		this.saveBtnXpath = saveBtnXpath;
+	}
+
+	public String getGetContentXpath() {
+		return getContentXpath;
+	}
+
+	public void setGetContentXpath(String getContentXpath) {
+		this.getContentXpath = getContentXpath;
 	}
 	
 }

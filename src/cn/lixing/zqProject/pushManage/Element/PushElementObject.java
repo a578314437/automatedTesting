@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import cn.lixing.zqProject.Pages.ParentPage;
+import cn.lixing.zqProject.facility.Element.CourseElementObject;
 
 public class PushElementObject {
 	private WebDriver driver;
@@ -21,6 +22,8 @@ public class PushElementObject {
 	private WebElement contextElement;
 	private WebElement saveBtnElement;
 	private WebElement EditPushBntElement;
+	private WebElement getContextXpthElement;
+	private static PushElementObject elementObject;
 	
 	public PushElementObject() {
 		context=new ClassPathXmlApplicationContext("AppctionContext.xml");
@@ -28,6 +31,15 @@ public class PushElementObject {
 		xpathData=new PushElementXpathData();
 		driver=page.startBrowse();
 	}
+	
+	public static PushElementObject getInStanceBlock(){
+        if(elementObject==null)
+            synchronized (PushElementObject.class) {
+                if(elementObject==null)
+                	elementObject = new PushElementObject();
+            }
+        return elementObject;
+    }
 
 	public WebDriver getDriver() {
 		return driver;
@@ -116,5 +128,15 @@ public class PushElementObject {
 	public void setEditPushBntElement(WebElement editPushBntElement) {
 		EditPushBntElement = editPushBntElement;
 	}
+
+	public WebElement getGetContextXpthElement() {
+		getContextXpthElement=page.getWebElement(xpathData.getGetContextXpth());
+		return getContextXpthElement;
+	}
+
+	public void setGetContextXpthElement(WebElement getContextXpthElement) {
+		this.getContextXpthElement = getContextXpthElement;
+	}
+	
 	
 }

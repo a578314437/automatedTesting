@@ -60,7 +60,8 @@ public class AddConrsePage{
 		TitleExpect=elementObject.getTitleElement().getAttribute("value");
 		//输入教程内容
 		page.sendKey(elementObject.getContentElement(), content);
-		ContentExpect=elementObject.getTitleElement().getText();
+		ContentExpect=elementObject.getGetContentXpathElement().getText();
+		System.out.println(ContentExpect);
 		//提交新增操作
 		elementObject.getSaveBtnElement().click();
 	}

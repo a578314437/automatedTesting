@@ -10,7 +10,8 @@ public class PushElementXpathData {
 	private String srcXPath;
 	private String contextXpath;
 	private String saveBtn;
-	private String EditPushBnt;
+	private String EditPushBtn;
+	private String getContextXpth;
 	
 	public PushElementXpathData() {
 		pushListXpath=getData("pushListXpath", "\\TestDataFile\\pushXpath");
@@ -20,7 +21,8 @@ public class PushElementXpathData {
 		srcXPath=getData("srcXPath", "\\TestDataFile\\pushXpath");
 		contextXpath=getData("contextXpath", "\\TestDataFile\\pushXpath");
 		saveBtn=getData("saveBtn", "\\TestDataFile\\pushXpath");
-		EditPushBnt=getData("EditPushBnt", "\\TestDataFile\\pushXpath");
+		EditPushBtn=getData("EditPushBtn", "\\TestDataFile\\pushXpath");
+		getContextXpth=getData("getContextXpth", "\\TestDataFile\\pushXpath");
 	}
 
 	public String getPushListXpath() {
@@ -80,11 +82,26 @@ public class PushElementXpathData {
 	}
 
 	public String getEditPushBnt() {
-		System.out.println(EditPushBnt);
-		return EditPushBnt;
+		return EditPushBtn;
 	}
 
 	public void setEditPushBnt(String editPushBnt) {
-		EditPushBnt = editPushBnt;
+		EditPushBtn = editPushBnt;
+	}
+
+	public String getEditPushBtn() {
+		return EditPushBtn;
+	}
+
+	public void setEditPushBtn(String editPushBtn) {
+		EditPushBtn = editPushBtn;
+	}
+
+	public String getGetContextXpth() {
+		return getContextXpth;
+	}
+
+	public void setGetContextXpth(String getContextXpth) {
+		this.getContextXpth = getContextXpth;
 	}
 }

@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static cn.lixing.zqProject.Uilt.CloseFileUilt.*;
@@ -22,6 +23,7 @@ public class CsvDataUilt {
 			while((lineData=reader.readLine())!=null) {
 				lineDataArray=lineData.split(",");
 				lineDataList.add(lineDataArray);
+				System.out.println(Arrays.asList(lineDataArray));
 			}
 			int lineDataArraylen=lineDataArray.length;
 			int lineDataListLen=lineDataList.size();
@@ -40,8 +42,11 @@ public class CsvDataUilt {
 		return testDatas;
 	}
 	public static void main(String[] args) {
-		Object[][] objs=getCsvData("D:\\zqProject\\zqProject\\TestDataFile\\insertDeviceDataFile.csv");
+		Object[][] objs=getCsvData("C:\\Users\\a6573\\git\\automatedTesting\\TestDataFile\\AddPushData.csv");
 		System.out.println(objs[0][0]);
+		System.out.println(objs[0][1]);
+		System.out.println(objs[0][2]);
+		System.out.println(objs[0][3]);
 		
 		
 	}

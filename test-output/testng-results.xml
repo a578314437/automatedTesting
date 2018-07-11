@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44739" started-at="2018-07-11T14:36:50Z" finished-at="2018-07-11T14:37:35Z">
+  <suite name="Default suite" duration-ms="44771" started-at="2018-07-11T15:06:05Z" finished-at="2018-07-11T15:06:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44739" started-at="2018-07-11T14:36:50Z" finished-at="2018-07-11T14:37:35Z">
+    <test name="Default test" duration-ms="44771" started-at="2018-07-11T15:06:05Z" finished-at="2018-07-11T15:06:49Z">
       <class name="cn.lixing.zqProject.pushManage.TestCase.PushTestCase">
-        <test-method status="PASS" signature="initTestClass()[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="initTestClass" is-config="true" duration-ms="18302" started-at="2018-07-11T22:36:50Z" finished-at="2018-07-11T22:37:08Z">
+        <test-method status="PASS" signature="initTestClass()[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="initTestClass" is-config="true" duration-ms="18138" started-at="2018-07-11T23:06:05Z" finished-at="2018-07-11T23:06:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTestClass -->
-        <test-method status="PASS" signature="addPushTestCase(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="addPushTestCase" duration-ms="25108" started-at="2018-07-11T22:37:08Z" data-provider="pushData" finished-at="2018-07-11T22:37:33Z">
+        <test-method status="PASS" signature="addPushTestCase(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="addPushTestCase" duration-ms="25272" started-at="2018-07-11T23:06:23Z" data-provider="pushData" finished-at="2018-07-11T23:06:48Z">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addPushTestCase -->
-        <test-method status="PASS" signature="close()[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="close" is-config="true" duration-ms="1291" started-at="2018-07-11T22:37:33Z" finished-at="2018-07-11T22:37:35Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="close" is-config="true" duration-ms="1321" started-at="2018-07-11T23:06:48Z" finished-at="2018-07-11T23:06:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

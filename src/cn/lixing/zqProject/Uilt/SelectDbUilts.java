@@ -32,7 +32,7 @@ public class SelectDbUilts {
 	 * @param TableName
 	 * @return
 	 */
-	public static List<Object> select(String TableName,String[]colValues) {
+	public static List<Object> select(String TableName,String[]colValues,String id) {
 		Connection connection;
 		String sql;
 		String colValueStr;
@@ -49,7 +49,7 @@ public class SelectDbUilts {
 		}
 		try {
 			colValueStr=colValueslist.toString().replace("[", "").replace("]", "");
-			sql="select * FROM(SELECT "+colValueStr+" FROM "+TableName+" ORDER BY id DESC) WHERE ROWNUM<=1";
+			sql="select * FROM(SELECT "+colValueStr+" FROM "+TableName+" ORDER BY "+id+" DESC) WHERE ROWNUM<=1";
 			pmt=connection.prepareStatement(sql);
 			result=pmt.executeQuery();
 			meta = result.getMetaData();

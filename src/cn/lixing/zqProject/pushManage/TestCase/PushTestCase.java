@@ -41,7 +41,7 @@ public class PushTestCase {
 	@Test(dataProvider="pushData")
 	public void addPushTestCase(String title,String Abstract,String context,String expResult) {
 		page.submitAddPush(title, Abstract, context);
-		expectedValues=select("TB_ARTICLE", new String[] {"TITLE","ABSTR","dbms_lob.substr(CONTENT)"});
+		expectedValues=select("TB_ARTICLE", new String[] {"TITLE","ABSTR","dbms_lob.substr(CONTENT)"},"id");
 		expecteTitle=(String) expectedValues.get(0);
 		expecteAbstract=(String) expectedValues.get(1);
 		expecteContext=((String) expectedValues.get(2)).replace("<p>", "").replace("</p>", "");

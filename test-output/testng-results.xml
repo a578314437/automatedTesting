@@ -2,33 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44771" started-at="2018-07-11T15:06:05Z" finished-at="2018-07-11T15:06:49Z">
+  <suite name="Default suite" duration-ms="29339" started-at="2018-07-12T13:49:37Z" finished-at="2018-07-12T13:50:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44771" started-at="2018-07-11T15:06:05Z" finished-at="2018-07-11T15:06:49Z">
-      <class name="cn.lixing.zqProject.pushManage.TestCase.PushTestCase">
-        <test-method status="PASS" signature="initTestClass()[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="initTestClass" is-config="true" duration-ms="18138" started-at="2018-07-11T23:06:05Z" finished-at="2018-07-11T23:06:23Z">
+    <test name="Default test" duration-ms="29339" started-at="2018-07-12T13:49:37Z" finished-at="2018-07-12T13:50:06Z">
+      <class name="cn.lixing.zqProject.AssorderManage.TestCase.AssorderTestCase">
+        <test-method status="PASS" signature="initTestClass()[pri:0, instance:cn.lixing.zqProject.AssorderManage.TestCase.AssorderTestCase@5f9d02cb]" name="initTestClass" is-config="true" duration-ms="15834" started-at="2018-07-12T21:49:37Z" finished-at="2018-07-12T21:49:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTestClass -->
-        <test-method status="PASS" signature="addPushTestCase(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="addPushTestCase" duration-ms="25272" started-at="2018-07-11T23:06:23Z" data-provider="pushData" finished-at="2018-07-11T23:06:48Z">
+        <test-method status="PASS" signature="AddAssorderTestCase(java.lang.String, java.lang.String)[pri:0, instance:cn.lixing.zqProject.AssorderManage.TestCase.AssorderTestCase@5f9d02cb]" name="AddAssorderTestCase" duration-ms="12378" started-at="2018-07-12T21:49:52Z" data-provider="assorderData" finished-at="2018-07-12T21:50:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[测试标题]]>
+                <![CDATA[超赞]]>
               </value>
             </param>
             <param index="1">
-              <value>
-                <![CDATA[测试摘要]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[测试内容]]>
-              </value>
-            </param>
-            <param index="3">
               <value>
                 <![CDATA[添加成功]]>
               </value>
@@ -36,12 +26,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addPushTestCase -->
-        <test-method status="PASS" signature="close()[pri:0, instance:cn.lixing.zqProject.pushManage.TestCase.PushTestCase@5f9d02cb]" name="close" is-config="true" duration-ms="1321" started-at="2018-07-11T23:06:48Z" finished-at="2018-07-11T23:06:49Z">
+        </test-method> <!-- AddAssorderTestCase -->
+        <test-method status="PASS" signature="close()[pri:0, instance:cn.lixing.zqProject.AssorderManage.TestCase.AssorderTestCase@5f9d02cb]" name="close" is-config="true" duration-ms="1103" started-at="2018-07-12T21:50:05Z" finished-at="2018-07-12T21:50:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- cn.lixing.zqProject.pushManage.TestCase.PushTestCase -->
+      </class> <!-- cn.lixing.zqProject.AssorderManage.TestCase.AssorderTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

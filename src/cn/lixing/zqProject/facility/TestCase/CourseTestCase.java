@@ -38,7 +38,7 @@ public class CourseTestCase {
 		
 		conrsePage.submitAddConrse(title, content);
 		
-		expectedValues=select("TB_DEVICE_EDU",new String[] {"TITLE","dbms_lob.substr(CONTENT)"});
+		expectedValues=select("TB_DEVICE_EDU",new String[] {"TITLE","dbms_lob.substr(CONTENT)"},"id");
 		expectedTitle=(String) expectedValues.get(0);
 		expectedContext=(String) ((String) expectedValues.get(1)).replace("<p>", "").replace("</p>", "");
 		actualTitle=conrsePage.getTitleExpect();

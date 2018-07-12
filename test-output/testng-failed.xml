@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="cn.lixing.zqProject.pushManage.TestCase.PushTestCase">
+      <class name="cn.lixing.zqProject.AssorderManage.TestCase.AssorderTestCase">
         <methods>
-          <include name="close"/>
-          <include name="addPushTestCase" invocation-numbers="0"/>
+          <include name="AddAssorderTestCase" invocation-numbers="0"/>
           <include name="initTestClass"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- cn.lixing.zqProject.pushManage.TestCase.PushTestCase -->
+      </class> <!-- cn.lixing.zqProject.AssorderManage.TestCase.AssorderTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -31,7 +31,7 @@ public class KeyPersonManageTestCase {
 	
 	@DataProvider(name="addKeyPersonData")
 	public Object[][] getTestData(){
-		return getCsvData("D:\\zqProject\\zqProject\\TestDataFile\\AddKeyPersonManageData.csv");
+		return getCsvData("AddKeyPersonManageData");
 	}
 	
 	@Test(dataProvider="addKeyPersonData")

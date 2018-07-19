@@ -10,14 +10,15 @@ import java.util.List;
 
 import static cn.lixing.zqProject.Uilt.CloseFileUilt.*;
 public class CsvDataUilt {
-	public static Object[][] getCsvData(String file){
+	public static Object[][] getCsvData(String fileName){
+		String RootPath=System.getProperty("user.dir");
 		BufferedReader reader=null;
 		String lineData=null;
 		String[] lineDataArray=null;
 		List<String[]> lineDataList=new ArrayList<>();
 		Object[][] testDatas=null;
 		try {
-			reader=new BufferedReader(new FileReader(file));
+			reader=new BufferedReader(new FileReader(RootPath+"//TestDataFile//"+fileName+".csv"));
 			reader.readLine();//ºöÂÔµÚÒ»ÐÐ
 			
 			while((lineData=reader.readLine())!=null) {
@@ -42,11 +43,10 @@ public class CsvDataUilt {
 		return testDatas;
 	}
 	public static void main(String[] args) {
-		Object[][] objs=getCsvData("C:\\Users\\a6573\\git\\automatedTesting\\TestDataFile\\AddPushData.csv");
+		Object[][] objs=getCsvData("AddKeyPersonManageData");
 		System.out.println(objs[0][0]);
 		System.out.println(objs[0][1]);
 		System.out.println(objs[0][2]);
-		System.out.println(objs[0][3]);
 		
 		
 	}

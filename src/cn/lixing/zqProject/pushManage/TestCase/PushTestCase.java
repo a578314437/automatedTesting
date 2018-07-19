@@ -35,7 +35,7 @@ public class PushTestCase {
 	
 	@DataProvider(name="pushData")
 	public Object[][] getTestData(){
-		return getCsvData("C:\\Users\\a6573\\git\\automatedTesting\\TestDataFile\\AddPushData.csv");
+		return getCsvData("AddPushData");
 	}
 	
 	@Test(dataProvider="pushData")

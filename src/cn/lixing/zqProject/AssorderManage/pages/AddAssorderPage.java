@@ -26,6 +26,11 @@ public class AddAssorderPage {
 		page.sendKey(elementObject.getLabelContextElement(), context);
 		
 		page.click(elementObject.getLabelStarsSelectElement());
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		page.click(elementObject.getStarsElement());
 		try {
 			Thread.sleep(5000);

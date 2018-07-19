@@ -4,20 +4,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.stereotype.Component;
 
 import cn.lixing.zqProject.Pages.Dao.Pages;
 
 import static cn.lixing.zqProject.Uilt.BrowseUilt.getBrowseDriver;
 
+import java.util.concurrent.TimeUnit;
+
 @Component("parent")
 public class ParentPage implements Pages {
 	private String browseName="chrome";
 	private WebDriver driver;
 	private WebElement element;
-	private WebDriverWait wait;
 	private String url="http://58.249.55.68:30063/adminUi/#/facility";
 	
 	
@@ -35,10 +34,10 @@ public class ParentPage implements Pages {
 		return driver;
 	}
 	
-	public void ElementWaitTime(String xpathExpression) {
-		wait=new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(xpathExpression)));
-	}
+//	public void ElementWaitTime(String xpathExpression) {
+//		wait=new WebDriverWait(driver, 30);
+//		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(xpathExpression)));
+//	}
 	
 	public WebDriver getDriver() {
 		return driver;
@@ -52,7 +51,7 @@ public class ParentPage implements Pages {
 	}
 	@Override
 	public WebElement getWebElement(String xpath) {
-		ElementWaitTime(xpath);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		element=driver.findElement(By.xpath(xpath));
 		return element;
 	}

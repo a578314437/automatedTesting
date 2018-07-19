@@ -6,22 +6,22 @@ public class KeyPersonManageElementXpathData {
 	private String AddKeyPersonXpath;
 	private String EditKeyPersonXpath;
 	private String DelKeyPersonXpath;
-	private String ShowCustomerNameXpath;
-	private String SelectCustomerNameXpath;
-	private String KeyPersonNameXpath;
-	private String ContactWayXpath;
-	private String SaveBtnXpath;
+	private String USER_ACCOUNTXPATH;
+	private String SEARCHBTNXPATH;
+	private String KEYPERSONNAMEXPATH;
+	private String KEYPERSONPHONEXPATH;
+	private String SAVEBTNXPATH;
 	
 	public KeyPersonManageElementXpathData() {
 		KeyPersonManageListXpath=getData("KeyPersonManageListXpath", "\\TestDataFile\\KeyPersonManageXpath");
 		AddKeyPersonXpath=getData("AddKeyPersonXpath", "\\TestDataFile\\KeyPersonManageXpath");
 		EditKeyPersonXpath=getData("EditKeyPersonXpath", "\\TestDataFile\\KeyPersonManageXpath");
 		DelKeyPersonXpath=getData("DelKeyPersonXpath", "\\TestDataFile\\KeyPersonManageXpath");
-		SelectCustomerNameXpath=getData("SelectCustomerNameXpath", "\\TestDataFile\\KeyPersonManageXpath");
-		KeyPersonNameXpath=getData("KeyPersonNameXpath", "\\TestDataFile\\KeyPersonManageXpath");
-		ContactWayXpath=getData("ContactWayXpath", "\\TestDataFile\\KeyPersonManageXpath");
-		SaveBtnXpath=getData("SaveBtnXpath", "\\TestDataFile\\KeyPersonManageXpath");
-		ShowCustomerNameXpath=getData("ShowCustomerNameXpath",  "\\TestDataFile\\KeyPersonManageXpath");
+		USER_ACCOUNTXPATH=getData("USER_ACCOUNTXPATH", "\\TestDataFile\\KeyPersonManageXpath");
+		SEARCHBTNXPATH=getData("SEARCHBTNXPATH", "\\TestDataFile\\KeyPersonManageXpath");
+		KEYPERSONNAMEXPATH=getData("KEYPERSONNAMEXPATH", "\\TestDataFile\\KeyPersonManageXpath");
+		KEYPERSONPHONEXPATH=getData("KEYPERSONPHONEXPATH", "\\TestDataFile\\KeyPersonManageXpath");
+		SAVEBTNXPATH=getData("SAVEBTNXPATH",  "\\TestDataFile\\KeyPersonManageXpath");
 	}
 
 	public String getKeyPersonManageListXpath() {
@@ -52,49 +52,48 @@ public class KeyPersonManageElementXpathData {
 		return DelKeyPersonXpath;
 	}
 
+	public String getUSER_ACCOUNTXPATH() {
+		return USER_ACCOUNTXPATH;
+	}
+
+	public void setUSER_ACCOUNTXPATH(String uSER_ACCOUNTXPATH) {
+		USER_ACCOUNTXPATH = uSER_ACCOUNTXPATH;
+	}
+
+	public String getSEARCHBTNXPATH() {
+		return SEARCHBTNXPATH;
+	}
+
+	public void setSEARCHBTNXPATH(String sEARCHBTNXPATH) {
+		SEARCHBTNXPATH = sEARCHBTNXPATH;
+	}
+
+	public String getKEYPERSONNAMEXPATH() {
+		return KEYPERSONNAMEXPATH;
+	}
+
+	public void setKEYPERSONNAMEXPATH(String kEYPERSONNAMEXPATH) {
+		KEYPERSONNAMEXPATH = kEYPERSONNAMEXPATH;
+	}
+
+	public String getKEYPERSONPHONEXPATH() {
+		return KEYPERSONPHONEXPATH;
+	}
+
+	public void setKEYPERSONPHONEXPATH(String kEYPERSONPHONEXPATH) {
+		KEYPERSONPHONEXPATH = kEYPERSONPHONEXPATH;
+	}
+
+	public String getSAVEBTNXPATH() {
+		return SAVEBTNXPATH;
+	}
+
+	public void setSAVEBTNXPATH(String sAVEBTNXPATH) {
+		SAVEBTNXPATH = sAVEBTNXPATH;
+	}
+
 	public void setDelKeyPersonXpath(String delKeyPersonXpath) {
 		DelKeyPersonXpath = delKeyPersonXpath;
 	}
-
-	public String getShowCustomerNameXpath() {
-		return ShowCustomerNameXpath;
-	}
-
-	public void setShowCustomerNameXpath(String showCustomerNameXpath) {
-		ShowCustomerNameXpath = showCustomerNameXpath;
-	}
-
-	public String getSelectCustomerNameXpath() {
-		return SelectCustomerNameXpath;
-	}
-
-	public void setSelectCustomerNameXpath(String selectCustomerNameXpath) {
-		SelectCustomerNameXpath = selectCustomerNameXpath;
-	}
-
-	public String getKeyPersonNameXpath() {
-		return KeyPersonNameXpath;
-	}
-
-	public void setKeyPersonNameXpath(String keyPersonNameXpath) {
-		KeyPersonNameXpath = keyPersonNameXpath;
-	}
-
-	public String getContactWayXpath() {
-		return ContactWayXpath;
-	}
-
-	public void setContactWayXpath(String contactWayXpath) {
-		ContactWayXpath = contactWayXpath;
-	}
-
-	public String getSaveBtnXpath() {
-		return SaveBtnXpath;
-	}
-
-	public void setSaveBtnXpath(String saveBtnXpath) {
-		SaveBtnXpath = saveBtnXpath;
-	}
-	
 	
 }

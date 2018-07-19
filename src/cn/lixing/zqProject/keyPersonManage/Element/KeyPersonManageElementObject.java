@@ -12,11 +12,11 @@ public class KeyPersonManageElementObject {
 	private WebElement AddKeyPersonElement;
 	private WebElement EditKeyPersonElement;
 	private WebElement DelKeyPersonElement;
-	private WebElement ShowCustomerNameElement;
-	private WebElement SelectCustomerNameElement;
-	private WebElement KeyPersonNameElement;
-	private WebElement ContactWayElement;
-	private WebElement SaveBtnElement;
+	private WebElement USER_ACCOUNTElement;
+	private WebElement SEARCHBTNElement;
+	private WebElement KEYPERSONNAMEElement;
+	private WebElement KEYPERSONPHONEElement;
+	private WebElement SAVEBTNElement;
 	private ApplicationContext context;
 	private ParentPage page;
 	private WebDriver driver;
@@ -64,50 +64,49 @@ public class KeyPersonManageElementObject {
 	public void setDelKeyPersonElement(WebElement delKeyPersonElement) {
 		DelKeyPersonElement = delKeyPersonElement;
 	}
-
-	public WebElement getShowCustomerNameElement() {
-		ShowCustomerNameElement=page.getWebElement(xpathData.getShowCustomerNameXpath());
-		return ShowCustomerNameElement;
+	public WebElement getUSER_ACCOUNTElement() {
+		USER_ACCOUNTElement=page.getWebElement(xpathData.getUSER_ACCOUNTXPATH());
+		return USER_ACCOUNTElement;
 	}
 
-	public void setShowCustomerNameElement(WebElement showCustomerNameElement) {
-		ShowCustomerNameElement = showCustomerNameElement;
+	public void setUSER_ACCOUNTElement(WebElement uSER_ACCOUNTElement) {
+		USER_ACCOUNTElement = uSER_ACCOUNTElement;
 	}
 
-	public WebElement getSelectCustomerNameElement() {
-		SelectCustomerNameElement=page.getWebElement(xpathData.getSelectCustomerNameXpath());
-		return SelectCustomerNameElement;
+	public WebElement getSEARCHBTNElement() {
+		SEARCHBTNElement=page.getWebElement(xpathData.getSEARCHBTNXPATH());
+		return SEARCHBTNElement;
 	}
 
-	public void setSelectCustomerNameElement(WebElement selectCustomerNameElement) {
-		SelectCustomerNameElement = selectCustomerNameElement;
+	public void setSEARCHBTNElement(WebElement sEARCHBTNElement) {
+		SEARCHBTNElement = sEARCHBTNElement;
 	}
 
-	public WebElement getKeyPersonNameElement() {
-		KeyPersonNameElement=page.getWebElement(xpathData.getKeyPersonNameXpath());
-		return KeyPersonNameElement;
+	public WebElement getKEYPERSONNAMEElement() {
+		KEYPERSONNAMEElement=page.getWebElement(xpathData.getKEYPERSONNAMEXPATH());
+		return KEYPERSONNAMEElement;
 	}
 
-	public void setKeyPersonNameElement(WebElement keyPersonNameElement) {
-		KeyPersonNameElement = keyPersonNameElement;
+	public void setKEYPERSONNAMEElement(WebElement kEYPERSONNAMEElement) {
+		KEYPERSONNAMEElement = kEYPERSONNAMEElement;
 	}
 
-	public WebElement getContactWayElement() {
-		ContactWayElement=page.getWebElement(xpathData.getContactWayXpath());
-		return ContactWayElement;
+	public WebElement getKEYPERSONPHONEElement() {
+		KEYPERSONPHONEElement=page.getWebElement(xpathData.getKEYPERSONPHONEXPATH());
+		return KEYPERSONPHONEElement;
 	}
 
-	public void setContactWayElement(WebElement contactWayElement) {
-		ContactWayElement = contactWayElement;
+	public void setKEYPERSONPHONEElement(WebElement kEYPERSONPHONEElement) {
+		KEYPERSONPHONEElement = kEYPERSONPHONEElement;
 	}
 
-	public WebElement getSaveBtnElement() {
-		SaveBtnElement=page.getWebElement(xpathData.getSaveBtnXpath());
-		return SaveBtnElement;
+	public WebElement getSAVEBTNElement() {
+		SAVEBTNElement=page.getWebElement(xpathData.getSAVEBTNXPATH());
+		return SAVEBTNElement;
 	}
 
-	public void setSaveBtnElement(WebElement saveBtnElement) {
-		SaveBtnElement = saveBtnElement;
+	public void setSAVEBTNElement(WebElement sAVEBTNElement) {
+		SAVEBTNElement = sAVEBTNElement;
 	}
 
 	public WebDriver getDriver() {

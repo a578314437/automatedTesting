@@ -19,6 +19,7 @@ public class AddKeyPersonPage {
 		listPage.openKeyPersonManageListPage();
 	
 		page.click(elementObject.getAddKeyPersonElement());
+		
 	}
 	
 	public void openEditKeyPersonPage() {
@@ -28,18 +29,18 @@ public class AddKeyPersonPage {
 	
 	public void submitAddKeyPerson(String keyPersonName,String phone) {
 		openAddKeyPersonPage();
-		page.click(elementObject.getShowCustomerNameElement());
 		try {
 			Thread.sleep(4000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		page.click(elementObject.getSelectCustomerNameElement());
-		page.sendKey(elementObject.getKeyPersonNameElement(), keyPersonName);
-		actualKeyPersonName=elementObject.getKeyPersonNameElement().getAttribute("value");
-		page.sendKey(elementObject.getContactWayElement(), phone);
-		actualKeyPhone=elementObject.getContactWayElement().getAttribute("value");
-		page.click(elementObject.getSaveBtnElement());
+		page.sendKey(elementObject.getUSER_ACCOUNTElement(), "607284572");
+		page.click(elementObject.getSEARCHBTNElement());
+		page.sendKey(elementObject.getKEYPERSONNAMEElement(), keyPersonName);
+		actualKeyPersonName=elementObject.getKEYPERSONNAMEElement().getAttribute("value");
+		page.sendKey(elementObject.getKEYPERSONPHONEElement(), phone);
+		actualKeyPhone=elementObject.getKEYPERSONPHONEElement().getAttribute("value");
+		page.click(elementObject.getSAVEBTNElement());
 
 	}
 	
@@ -70,6 +71,6 @@ public class AddKeyPersonPage {
 
 	public static void main(String[] args) {
 		AddKeyPersonPage page=new AddKeyPersonPage();
-		page.submitAddKeyPerson("zhangsan", "13598754125");
+		page.submitAddKeyPerson("zhangsan", "13598754110");
 	}
 }

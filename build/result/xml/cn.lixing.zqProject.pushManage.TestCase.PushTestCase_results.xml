@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="zqProjectTestCase"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="53.436">
+  <properties />
+  
+  
+            <testcase name="addPushTestCase" time="27.073" classname="cn.lixing.zqProject.pushManage.TestCase.PushTestCase" />
+                <testcase name="submitAllPushTestCase" time="8.638" classname="cn.lixing.zqProject.pushManage.TestCase.PushTestCase" />
+                <testcase name="submitPushTestCase" time="17.725" classname="cn.lixing.zqProject.pushManage.TestCase.PushTestCase" />
+      
+</testsuite>

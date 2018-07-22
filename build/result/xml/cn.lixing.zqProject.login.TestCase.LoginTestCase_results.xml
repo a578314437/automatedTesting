@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.331">
+           time="3.594">
   <properties />
   
   
-            <testcase name="LoginTestCase_01" time="3.331" classname="cn.lixing.zqProject.login.TestCase.LoginTestCase" />
+            <testcase name="LoginTestCase_01" time="3.594" classname="cn.lixing.zqProject.login.TestCase.LoginTestCase" />
       
 </testsuite>

@@ -21,7 +21,7 @@ public class LoginTestCase {
 	}
 	@DataProvider(name="loginData")
 	public Object[][] getTestData(){
-		return getCsvData("D:\\zqProject\\zqProject\\TestDataFile\\loginData.csv");
+		return getCsvData("loginData");
 	}
 	
 	@Test(dataProvider="loginData")

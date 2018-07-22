@@ -6,7 +6,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import cn.lixing.zqProject.Pages.ParentPage;
-import cn.lixing.zqProject.facility.Element.CourseElementObject;
 
 public class PushElementObject {
 	private WebDriver driver;
@@ -15,7 +14,7 @@ public class PushElementObject {
 	private PushElementXpathData xpathData;
 	
 	private WebElement pushListElement;
-	private WebElement pushBntElement;
+	private WebElement AddpushBntElement;
 	private WebElement titleElement;
 	private WebElement abstrElement;
 	private WebElement srcElement;
@@ -23,6 +22,16 @@ public class PushElementObject {
 	private WebElement saveBtnElement;
 	private WebElement EditPushBntElement;
 	private WebElement getContextXpthElement;
+	
+	private WebElement PUSHBTNPUSHBTNXPATHElement;
+	private WebElement COMPANYNAMEElement;
+	private WebElement SEARCHBTNElement;
+	private WebElement PUSHALLBTNElement;
+	private WebElement SELECTCOMPANYElement;
+	private WebElement CONFIRMBTNElement;
+	private WebElement PUSHBTNElement;
+	private WebElement CONFIRMPUSHBTNElement;
+	
 	private static PushElementObject elementObject;
 	
 	public PushElementObject() {
@@ -58,13 +67,14 @@ public class PushElementObject {
 		this.pushListElement = pushListElement;
 	}
 
-	public WebElement getPushBntElement() {
-		pushBntElement=page.getWebElement(xpathData.getAddPushBnt());
-		return pushBntElement;
+
+	public WebElement getAddpushBntElement() {
+		AddpushBntElement=page.getWebElement(xpathData.getAddPushBnt());
+		return AddpushBntElement;
 	}
 
-	public void setPushBntElement(WebElement pushBntElement) {
-		this.pushBntElement = pushBntElement;
+	public void setAddpushBntElement(WebElement addpushBntElement) {
+		AddpushBntElement = addpushBntElement;
 	}
 
 	public WebElement getTitleElement() {
@@ -136,6 +146,78 @@ public class PushElementObject {
 
 	public void setGetContextXpthElement(WebElement getContextXpthElement) {
 		this.getContextXpthElement = getContextXpthElement;
+	}
+
+	public WebElement getPUSHBTNElement() {
+		PUSHBTNElement=page.getWebElement(xpathData.getPUSHBTN());
+		return PUSHBTNElement;
+	}
+
+	public void setPUSHBTNElement(WebElement pUSHBTNElement) {
+		PUSHBTNElement = pUSHBTNElement;
+	}
+
+	public WebElement getCOMPANYNAMEElement() {
+		COMPANYNAMEElement=page.getWebElement(xpathData.getCOMPANYNAME());
+		return COMPANYNAMEElement;
+	}
+
+	public void setCOMPANYNAMEElement(WebElement cOMPANYNAMEElement) {
+		COMPANYNAMEElement = cOMPANYNAMEElement;
+	}
+
+	public WebElement getSEARCHBTNElement() {
+		SEARCHBTNElement=page.getWebElement(xpathData.getSEARCHBTN());
+		return SEARCHBTNElement;
+	}
+
+	public void setSEARCHBTNElement(WebElement sEARCHBTNElement) {
+		SEARCHBTNElement = sEARCHBTNElement;
+	}
+
+	public WebElement getPUSHALLBTNElement() {
+		PUSHALLBTNElement=page.getWebElement(xpathData.getPUSHALLBTN());
+		return PUSHALLBTNElement;
+	}
+
+	public void setPUSHALLBTNElement(WebElement pUSHALLBTNElement) {
+		PUSHALLBTNElement = pUSHALLBTNElement;
+	}
+
+	public WebElement getSELECTCOMPANYElement() {
+		SELECTCOMPANYElement=page.getWebElement(xpathData.getSELECTCOMPANY());
+		return SELECTCOMPANYElement;
+	}
+
+	public void setSELECTCOMPANYElement(WebElement sELECTCOMPANYElement) {
+		SELECTCOMPANYElement = sELECTCOMPANYElement;
+	}
+
+	public WebElement getCONFIRMBTNElement() {
+		CONFIRMBTNElement=page.getWebElement(xpathData.getCONFIRMBTN());
+		return CONFIRMBTNElement;
+	}
+
+	public void setCONFIRMBTNElement(WebElement cONFIRMBTNElement) {
+		CONFIRMBTNElement = cONFIRMBTNElement;
+	}
+
+	public WebElement getCONFIRMPUSHBTNElement() {
+		CONFIRMPUSHBTNElement=page.getWebElement(xpathData.getCONFIRMPUSHBTN());
+		return CONFIRMPUSHBTNElement;
+	}
+
+	public void setCONFIRMPUSHBTNElement(WebElement cONFIRMPUSHBTNElement) {
+		CONFIRMPUSHBTNElement = cONFIRMPUSHBTNElement;
+	}
+
+	public WebElement getPUSHBTNPUSHBTNXPATHElement() {
+		PUSHBTNPUSHBTNXPATHElement=page.getWebElement(xpathData.getPUSHBTNXPATH());
+		return PUSHBTNPUSHBTNXPATHElement;
+	}
+
+	public void setPUSHBTNPUSHBTNXPATHElement(WebElement pUSHBTNPUSHBTNXPATHElement) {
+		PUSHBTNPUSHBTNXPATHElement = pUSHBTNPUSHBTNXPATHElement;
 	}
 	
 	

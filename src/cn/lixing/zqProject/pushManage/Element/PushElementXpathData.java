@@ -13,6 +13,15 @@ public class PushElementXpathData {
 	private String EditPushBtn;
 	private String getContextXpth;
 	
+	private String PUSHBTNXPATH;
+	private String COMPANYNAME;
+	private String SEARCHBTN;
+	private String PUSHALLBTN;
+	private String SELECTCOMPANY;
+	private String CONFIRMBTN;
+	private String CONFIRMPUSHBTN;
+	private String PUSHBTN;
+	
 	public PushElementXpathData() {
 		pushListXpath=getData("pushListXpath", "\\TestDataFile\\pushXpath");
 		AddPushBnt=getData("AddPushBnt", "\\TestDataFile\\pushXpath");
@@ -23,6 +32,15 @@ public class PushElementXpathData {
 		saveBtn=getData("saveBtn", "\\TestDataFile\\pushXpath");
 		EditPushBtn=getData("EditPushBtn", "\\TestDataFile\\pushXpath");
 		getContextXpth=getData("getContextXpth", "\\TestDataFile\\pushXpath");
+		
+		PUSHBTNXPATH=getData("PUSHBTNXPATH", "\\TestDataFile\\pushXpath");
+		COMPANYNAME=getData("COMPANYNAME", "\\TestDataFile\\pushXpath");
+		SEARCHBTN=getData("SEARCHBTN", "\\TestDataFile\\pushXpath");
+		PUSHALLBTN=getData("PUSHALLBTN", "\\TestDataFile\\pushXpath");
+		SELECTCOMPANY=getData("SELECTCOMPANY", "\\TestDataFile\\pushXpath");
+		CONFIRMBTN=getData("CONFIRMBTN", "\\TestDataFile\\pushXpath");
+		PUSHBTN=getData("PUSHBTN", "\\TestDataFile\\pushXpath");
+		CONFIRMPUSHBTN=getData("CONFIRMPUSHBTN", "\\TestDataFile\\pushXpath");
 	}
 
 	public String getPushListXpath() {
@@ -104,4 +122,69 @@ public class PushElementXpathData {
 	public void setGetContextXpth(String getContextXpth) {
 		this.getContextXpth = getContextXpth;
 	}
+
+	public String getPUSHBTNXPATH() {
+		return PUSHBTNXPATH;
+	}
+
+	public void setPUSHBTNXPATH(String pUSHBTNXPATH) {
+		PUSHBTNXPATH = pUSHBTNXPATH;
+	}
+
+	public String getCOMPANYNAME() {
+		return COMPANYNAME;
+	}
+
+	public void setCOMPANYNAME(String cOMPANYNAME) {
+		COMPANYNAME = cOMPANYNAME;
+	}
+
+	public String getSEARCHBTN() {
+		return SEARCHBTN;
+	}
+
+	public void setSEARCHBTN(String sEARCHBTN) {
+		SEARCHBTN = sEARCHBTN;
+	}
+
+	public String getPUSHALLBTN() {
+		return PUSHALLBTN;
+	}
+
+	public void setPUSHALLBTN(String pUSHALLBTN) {
+		PUSHALLBTN = pUSHALLBTN;
+	}
+
+	public String getSELECTCOMPANY() {
+		return SELECTCOMPANY;
+	}
+
+	public void setSELECTCOMPANY(String sELECTCOMPANY) {
+		SELECTCOMPANY = sELECTCOMPANY;
+	}
+
+	public String getCONFIRMBTN() {
+		return CONFIRMBTN;
+	}
+
+	public void setCONFIRMBTN(String cONFIRMBTN) {
+		CONFIRMBTN = cONFIRMBTN;
+	}
+
+	public String getCONFIRMPUSHBTN() {
+		return CONFIRMPUSHBTN;
+	}
+
+	public void setCONFIRMPUSHBTN(String cONFIRMPUSHBTN) {
+		CONFIRMPUSHBTN = cONFIRMPUSHBTN;
+	}
+
+	public String getPUSHBTN() {
+		return PUSHBTN;
+	}
+
+	public void setPUSHBTN(String pUSHBTN) {
+		PUSHBTN = pUSHBTN;
+	}
+	
 }

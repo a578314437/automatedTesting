@@ -29,7 +29,7 @@ public class AssorderTestCase {
 	
 	@DataProvider(name="assorderData")
 	public Object[][] getTestData(){
-		return getCsvData("C:\\Users\\a6573\\git\\automatedTesting\\TestDataFile\\AddAssorderData.csv");
+		return getCsvData("AddAssorderData");
 	}
 	
 	@Test(dataProvider="assorderData")

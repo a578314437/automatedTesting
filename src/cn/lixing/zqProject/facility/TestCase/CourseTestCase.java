@@ -15,9 +15,9 @@ import cn.lixing.zqProject.facility.Pages.AddConrsePage;
 public class CourseTestCase {
 	private AddConrsePage conrsePage;
 	private String actualTitle;
-	private String actualContext;
+	//private String actualContext;
 	private String expectedTitle;
-	private String expectedContext;
+	//private String expectedContext;
 	private List<Object>expectedValues;
 	private CourseElementObject elementObject;
 	
@@ -30,7 +30,7 @@ public class CourseTestCase {
 	
 	@DataProvider(name="CourseData")
 	public Object[][] getTestData(){
-		return getCsvData("D:\\zqProject\\zqProject\\TestDataFile\\AddCourseData.csv");
+		return getCsvData("AddCourseData");
 	}
 	
 	@Test(dataProvider="CourseData")
@@ -38,14 +38,14 @@ public class CourseTestCase {
 		
 		conrsePage.submitAddConrse(title, content);
 		
-		expectedValues=select("TB_DEVICE_EDU",new String[] {"TITLE","dbms_lob.substr(CONTENT)"},"id");
+		expectedValues=select("TB_DEVICE_EDU",new String[] {"TITLE"},"id");
 		expectedTitle=(String) expectedValues.get(0);
-		expectedContext=(String) ((String) expectedValues.get(1)).replace("<p>", "").replace("</p>", "");
+		//expectedContext=(String) ((String) expectedValues.get(1)).replace("<p>", "").replace("</p>", "");
 		actualTitle=conrsePage.getTitleExpect();
-		actualContext=conrsePage.getContentExpect();
+		//actualContext=conrsePage.getContentExpect();
 		
 		Assert.assertEquals(actualTitle,expectedTitle);
-		Assert.assertEquals(actualContext,expectedContext);
+		//Assert.assertEquals(actualContext,expectedContext);
 	}
 	
 	@AfterClass

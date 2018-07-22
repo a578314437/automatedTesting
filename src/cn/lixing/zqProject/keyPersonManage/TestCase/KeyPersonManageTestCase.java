@@ -37,7 +37,7 @@ public class KeyPersonManageTestCase {
 	@Test(dataProvider="addKeyPersonData")
 	public void AddKeyPersonTestCase(String keyPersonName,String phone,String expResult) {
 		keyPersonPage.submitAddKeyPerson(keyPersonName, phone);
-		expectedValues=select("TB_KEY_PERSON_INFO", new String[]{"PERSON_NAME","KEY_PHONE"},"id");
+		expectedValues=select("TB_KEY_PERSON_INFO", new String[]{"PERSON_NAME","KEY_PHONE"},"CREATE_TIME");
 		expectedKeyPersonName=(String) expectedValues.get(0);
 		expectedPhone=(String) expectedValues.get(1);
 		

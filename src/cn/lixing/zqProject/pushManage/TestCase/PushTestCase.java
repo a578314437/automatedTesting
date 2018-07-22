@@ -27,18 +27,27 @@ public class PushTestCase {
 	private String actualAbstract;
 	private String actualContext;
 	
+	private int compaynNameNum=0;
+	private int actualCompaynNameNum;
+	private int expecteCompaynNameNum;
+	
+	
 	@BeforeClass
 	public void initTestClass() {
 		page=new AddPushPage();
 		elementObject=page.getElementObject();
 	}
 	
-	@DataProvider(name="pushData")
-	public Object[][] getTestData(){
+	@DataProvider(name="AddpushData")
+	public Object[][] getTestAddPushData(){
 		return getCsvData("AddPushData");
 	}
 	
-	@Test(dataProvider="pushData")
+	@DataProvider(name="pushData")
+	public Object[][]getTestPushData(){
+		return getCsvData("pushData");
+	}
+	@Test(dataProvider="AddpushData")
 	public void addPushTestCase(String title,String Abstract,String context,String expResult) {
 		page.submitAddPush(title, Abstract, context);
 		expectedValues=select("TB_ARTICLE", new String[] {"TITLE","ABSTR","dbms_lob.substr(CONTENT)"},"id");
@@ -54,7 +63,30 @@ public class PushTestCase {
 		Assert.assertEquals(actualAbstract,expecteAbstract);
 		Assert.assertEquals(actualContext,expecteContext);
 	}
-	
+	@Test(dataProvider="pushData")
+	public void submitPushTestCase(String compaynName) {
+		compaynNameNum=0;
+		actualCompaynNameNum=getTableCountNum("TB_ARTICLE_COMPANY", compaynName);
+		page.submitPush(compaynName);
+		compaynNameNum++;
+		actualCompaynNameNum=actualCompaynNameNum+compaynNameNum;
+		expecteCompaynNameNum=getTableCountNum("TB_ARTICLE_COMPANY", compaynName);
+		
+		Assert.assertEquals(actualCompaynNameNum,expecteCompaynNameNum);
+		
+	}
+	@Test
+	public void submitAllPushTestCase() {
+		actualCompaynNameNum=getTableCountNum("TB_ARTICLE_COMPANY", null);
+		compaynNameNum=getTableCountNum("TB_CACHE_COMPANY_INFO", null);
+		actualCompaynNameNum=actualCompaynNameNum+compaynNameNum;
+		
+		page.submitAllPush();
+		
+		expecteCompaynNameNum=getTableCountNum("TB_ARTICLE_COMPANY", null);
+		
+		Assert.assertEquals(actualCompaynNameNum,expecteCompaynNameNum);
+	}
 	@AfterClass
 	public void close() {
 		elementObject.getDriver().quit();

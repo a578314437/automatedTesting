@@ -8,8 +8,9 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import static cn.lixing.zqProject.Uilt.PropertiesFileUilt.*;
+import static cn.lixing.zqProject.Uilt.SelectDbUilts.select;
+
 public class SelectDbUilts {
 	public static Connection getConnection() {
 		Connection connection=null;
@@ -50,6 +51,7 @@ public class SelectDbUilts {
 		try {
 			colValueStr=colValueslist.toString().replace("[", "").replace("]", "");
 			sql="select * FROM(SELECT "+colValueStr+" FROM "+TableName+" ORDER BY "+id+" DESC) WHERE ROWNUM<=1";
+			System.out.println(sql);
 			pmt=connection.prepareStatement(sql);
 			result=pmt.executeQuery();
 			meta = result.getMetaData();
@@ -82,8 +84,41 @@ public class SelectDbUilts {
 		}
 		return listArr.get(0);
 	}
-//	public static void main(String[] args) {	
-//		String[] ass=new String[] {"TITLE","dbms_lob.substr(CONTENT)"};
-//		System.out.println(select("TB_DEVICE_EDU",ass));
-//	}
+	/**
+	 * 获取对应表的行数
+	 * @param TableName
+	 * @param colName
+	 * @return 返回行数
+	 */
+	public static int getTableCountNum(String TableName,Object COMPANY_NAME) {
+		Connection connection;
+		PreparedStatement pmt=null;
+		ResultSet rs=null;
+		int colMax=0;
+		String sql;
+		connection=getConnection();
+		try {
+			if(COMPANY_NAME==null) {
+				sql="SELECT COUNT(*) FROM "+TableName+"";
+			}else {
+				sql="select count(*) from TB_CACHE_COMPANY_INFO a INNER JOIN TB_ARTICLE_COMPANY b ON a.COMPANY_CODE=b.COMPANY_CODE WHERE COMPANY_NAME LIKE '%"+COMPANY_NAME+"%'";
+			}
+			
+			pmt=connection.prepareStatement(sql);
+			rs=pmt.executeQuery();
+			while(rs.next()) {
+				colMax=rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return colMax;
+	}
+	public static void main(String[] args) {
+		List<Object>list=select("TB_KEY_PERSON_INFO", new String[]{"PERSON_NAME","KEY_PHONE"},"CREATE_TIME");
+		for(Object obj:list) {
+			System.out.println(obj);
+		}
+//		System.out.println(getTableCountNum("TB_ARTICLE_COMPANY", "霖"));
+	}
 }

@@ -3,7 +3,6 @@ package cn.lixing.zqProject.pushManage.pages;
 import cn.lixing.zqProject.Pages.ParentPage;
 import cn.lixing.zqProject.pushManage.Element.PushElementObject;
 import static cn.lixing.zqProject.Uilt.ExecuteUploadFileUilt.*;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 public class AddPushPage {
@@ -24,12 +23,22 @@ public class AddPushPage {
 	
 	public void openAddPushPage() {
 		listPage.openPushManageListPage();
-		page.click(elementObject.getPushBntElement());
+		page.click(elementObject.getAddpushBntElement());
 	}
 	
 	public void openEditPushPage() {
 		listPage.openPushManageListPage();
 		page.click(elementObject.getEditPushBntElement());
+	}
+	
+	public void openPushPage() {
+		listPage.openPushManageListPage();
+		try {
+			Thread.sleep(6000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		page.click(elementObject.getPUSHBTNPUSHBTNXPATHElement());
 	}
 	
 	public void submitAddPush(String TestTitle,String TestAbstr,String TestContext) {
@@ -60,6 +69,27 @@ public class AddPushPage {
 			e.printStackTrace();
 		}
 		page.click(elementObject.getSaveBtnElement());
+		
+	}
+	public void submitPush(String compaynName) {
+		openPushPage();
+		page.sendKey(elementObject.getCOMPANYNAMEElement(), compaynName);
+		page.click(elementObject.getSEARCHBTNElement());
+		page.click(elementObject.getSELECTCOMPANYElement());
+		page.click(elementObject.getCONFIRMBTNElement());
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		page.click(elementObject.getPUSHBTNElement());
+		page.click(elementObject.getCONFIRMPUSHBTNElement());
+		
+	}
+	public void submitAllPush() {
+		openPushPage();
+		page.click(elementObject.getPUSHALLBTNElement());
+		page.click(elementObject.getCONFIRMPUSHBTNElement());
 		
 	}
 	
@@ -93,5 +123,9 @@ public class AddPushPage {
 
 	public void setContext(String context) {
 		this.context = context;
+	}
+	public static void main(String[] args) {
+		AddPushPage page=new AddPushPage();
+		page.submitAllPush();
 	}
 }

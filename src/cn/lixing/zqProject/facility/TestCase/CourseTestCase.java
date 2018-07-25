@@ -1,6 +1,7 @@
 package cn.lixing.zqProject.facility.TestCase;
 
 import static cn.lixing.zqProject.Uilt.CsvDataUilt.getCsvData;
+import static cn.lixing.zqProject.Uilt.SelectDbUilts.deleteData;
 import static cn.lixing.zqProject.Uilt.SelectDbUilts.select;
 
 import java.util.List;
@@ -50,6 +51,7 @@ public class CourseTestCase {
 	
 	@AfterClass
 	public void close() {
+		deleteData("TB_DEVICE_EDU","id");
 		elementObject.getDriver().quit();
 	}
 }

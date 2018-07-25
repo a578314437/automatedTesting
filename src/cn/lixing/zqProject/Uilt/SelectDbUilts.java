@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import static cn.lixing.zqProject.Uilt.PropertiesFileUilt.*;
-import static cn.lixing.zqProject.Uilt.SelectDbUilts.select;
 
 public class SelectDbUilts {
 	public static Connection getConnection() {
@@ -114,11 +113,39 @@ public class SelectDbUilts {
 		}
 		return colMax;
 	}
-	public static void main(String[] args) {
-		List<Object>list=select("TB_KEY_PERSON_INFO", new String[]{"PERSON_NAME","KEY_PHONE"},"CREATE_TIME");
-		for(Object obj:list) {
-			System.out.println(obj);
+	/**
+	 * 删除数据
+	 * @param TableName
+	 * @param colName
+	 */
+	public static void deleteData(String TableName,String colName) {
+		Connection connection;
+		PreparedStatement pmt=null;
+		String sql=null;
+		connection=getConnection();
+		try {
+			if(colName==null) {
+				sql="DELETE "+TableName;
+			}
+			sql="DELETE "+TableName+" WHERE "+colName+"=(select * FROM(SELECT "+colName+" FROM "+TableName+" ORDER BY "+colName+" DESC) WHERE ROWNUM=1)";
+			pmt=connection.prepareStatement(sql);
+			pmt.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
+		try {
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		System.out.println("数据清除成功！！");
+	}
+	public static void main(String[] args) {
+//		List<Object>list=select("TB_KEY_PERSON_INFO", new String[]{"PERSON_NAME","KEY_PHONE"},"CREATE_TIME");
+//		for(Object obj:list) {
+//			System.out.println(obj);
+//		}
 //		System.out.println(getTableCountNum("TB_ARTICLE_COMPANY", "霖"));
+		deleteData("TB_KEY_PERSON_INFO","id");
 	}
 }

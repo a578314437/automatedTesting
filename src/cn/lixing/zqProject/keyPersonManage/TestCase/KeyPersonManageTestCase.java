@@ -52,6 +52,7 @@ public class KeyPersonManageTestCase {
 	
 	@AfterClass
 	public void close() {
+		deleteData("TB_KEY_PERSON_INFO","id");
 		elementObject.getDriver().quit();
 	}
 }

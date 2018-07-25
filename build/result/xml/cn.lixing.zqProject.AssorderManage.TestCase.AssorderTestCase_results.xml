@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="17.456">
+           time="16.654">
   <properties />
   
   
-            <testcase name="AddAssorderTestCase" time="17.456" classname="cn.lixing.zqProject.AssorderManage.TestCase.AssorderTestCase" />
+            <testcase name="AddAssorderTestCase" time="16.654" classname="cn.lixing.zqProject.AssorderManage.TestCase.AssorderTestCase" />
       
 </testsuite>

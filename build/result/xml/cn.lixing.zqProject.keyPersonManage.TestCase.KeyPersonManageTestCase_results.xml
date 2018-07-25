@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="zqProjectTestCase"
            tests="1"
-           failures="0"
+           failures="1"
            errors="0"
            skipped="0"
-           time="10.012">
+           time="8.599">
   <properties />
+            <testcase name="AddKeyPersonTestCase" time="8.599" classname="cn.lixing.zqProject.keyPersonManage.TestCase.KeyPersonManageTestCase">
+                <failure type="java.lang.AssertionError"
+                  message="expected [lixing002] but found [lixing01]"
+              >
+<![CDATA[java.lang.AssertionError: expected [lixing002] but found [lixing01]
+  org.testng.Assert.fail(Assert.java:94)
+  org.testng.Assert.failNotEquals(Assert.java:496)
+  org.testng.Assert.assertEquals(Assert.java:125)
+  org.testng.Assert.assertEquals(Assert.java:178)
+  org.testng.Assert.assertEquals(Assert.java:188)
+  cn.lixing.zqProject.keyPersonManage.TestCase.KeyPersonManageTestCase.AddKeyPersonTestCase(KeyPersonManageTestCase.java:47)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+  java.lang.reflect.Method.invoke(Unknown Source)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+  org.testng.TestRunner.privateRun(TestRunner.java:774)
+  org.testng.TestRunner.run(TestRunner.java:624)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+  org.testng.SuiteRunner.run(SuiteRunner.java:261)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+  org.testng.TestNG.run(TestNG.java:1048)
+  org.testng.TestNG.privateMain(TestNG.java:1355)
+  org.testng.TestNG.main(TestNG.java:1324)
+]]>
+      </failure>
+
+          </testcase>
   
   
-            <testcase name="AddKeyPersonTestCase" time="10.012" classname="cn.lixing.zqProject.keyPersonManage.TestCase.KeyPersonManageTestCase" />
-      
+  
 </testsuite>

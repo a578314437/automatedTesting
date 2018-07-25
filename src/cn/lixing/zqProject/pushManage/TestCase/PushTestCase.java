@@ -90,5 +90,7 @@ public class PushTestCase {
 	@AfterClass
 	public void close() {
 		elementObject.getDriver().quit();
+		deleteData("TB_ARTICLE","id");
+		deleteData("TB_ARTICLE_COMPANY",null);
 	}
 }

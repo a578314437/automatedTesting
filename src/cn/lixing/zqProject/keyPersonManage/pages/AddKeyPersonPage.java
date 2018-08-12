@@ -35,7 +35,17 @@ public class AddKeyPersonPage {
 			e.printStackTrace();
 		}
 		page.sendKey(elementObject.getUSER_ACCOUNTElement(), "607284572");
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		page.click(elementObject.getSEARCHBTNElement());
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		page.sendKey(elementObject.getKEYPERSONNAMEElement(), keyPersonName);
 		actualKeyPersonName=elementObject.getKEYPERSONNAMEElement().getAttribute("value");
 		page.sendKey(elementObject.getKEYPERSONPHONEElement(), phone);
@@ -71,6 +81,6 @@ public class AddKeyPersonPage {
 
 	public static void main(String[] args) {
 		AddKeyPersonPage page=new AddKeyPersonPage();
-		page.submitAddKeyPerson("zhangsan", "13598754110");
+		page.submitAddKeyPerson("555", "13765231234");
 	}
 }

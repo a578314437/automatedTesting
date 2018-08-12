@@ -31,6 +31,7 @@ public class ParentPage implements Pages {
 		driver.get(url);
 		js.executeScript("location.reload()");
 		driver.manage().window().maximize();
+		
 		return driver;
 	}
 	
@@ -74,5 +75,4 @@ public class ParentPage implements Pages {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
 }

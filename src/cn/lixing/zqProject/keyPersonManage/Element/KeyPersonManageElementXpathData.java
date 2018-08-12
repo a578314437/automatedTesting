@@ -53,6 +53,7 @@ public class KeyPersonManageElementXpathData {
 	}
 
 	public String getUSER_ACCOUNTXPATH() {
+		System.out.println(USER_ACCOUNTXPATH);
 		return USER_ACCOUNTXPATH;
 	}
 

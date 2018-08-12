@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="cn.lixing.zqProject.keyPersonManage.TestCase.KeyPersonManageTestCase">
+      <class name="cn.lixing.zqProject.CustManage.TestCase.CustManageTestCase">
         <methods>
-          <include name="close"/>
-          <include name="AddKeyPersonTestCase" invocation-numbers="0"/>
+          <include name="AddCustTestCase" invocation-numbers="0"/>
           <include name="initTestClass"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- cn.lixing.zqProject.keyPersonManage.TestCase.KeyPersonManageTestCase -->
+      </class> <!-- cn.lixing.zqProject.CustManage.TestCase.CustManageTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
